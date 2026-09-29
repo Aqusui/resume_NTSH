@@ -1,152 +1,195 @@
-<!-- 導覽列 -->
+<!-- ===== 導覽列 ===== -->
 <nav>
-    <div class="logo">我的個人網站</div>
+    <div class="logo">
+        我的高中生活
+    </div>
 
-    <div>
+    <div class="nav-links">
         <a href="/">首頁</a>
         <a href="/activities">課外活動</a>
     </div>
 </nav>
 
 
-<!-- 頁首 -->
+<!-- ===== 頁首 ===== -->
 <header>
-    <h1>我的課外活動</h1>
-    <p>探索興趣、累積經驗，讓高中生活更加精彩</p>
+    <h1>課外活動</h1>
+    <p>探索興趣、累積經驗，留下高中三年的精彩回憶</p>
 </header>
 
 
-<!-- 內容 -->
+<!-- ===== 主要內容 ===== -->
 <main class="container">
 
-    <div class="intro">
-        <h2>課外活動與興趣</h2>
+    <!-- 活動介紹 -->
+    <section class="intro">
+        <h2>我的課外生活</h2>
 
         <p>
-            高中三年除了學習課業之外，我也積極參與不同的
-            課外活動。這些經驗讓我學習到團隊合作、
-            時間管理，也讓我更加了解自己的興趣。
+            高中三年除了學校課業之外，我也積極參與不同的
+            課外活動。透過參加社團、運動、自主學習以及
+            各種校內活動，我累積了許多寶貴的經驗。
         </p>
-    </div>
+
+        <p>
+            這些活動不只讓我的高中生活更加充實，
+            也讓我學習到團隊合作、時間管理、
+            溝通能力以及面對問題時的解決能力。
+        </p>
+    </section>
 
 
-    <!-- 活動 -->
-    <div class="activities">
+    <!-- ===== 活動一：程式設計 ===== -->
+    <section class="activity-card">
 
-        <!-- 程式設計 -->
-        <div class="activity-card">
+        <img
+            src="{{ url_for('static', filename='images/coding.jpg') }}"
+            alt="程式設計活動"
+            class="activity-image"
+        >
 
-            <img src="{{ url_for('static', filename='images/coding.jpg') }}"
-                 alt="程式設計活動">
+        <div class="activity-content">
 
-            <div class="activity-content">
-                <h3>💻 程式設計</h3>
+            <h2>💻 程式設計與網頁製作</h2>
 
-                <p>
-                    我對資訊科技與程式設計很有興趣。
-                    課餘時間會學習 HTML、CSS、JavaScript
-                    與 Python，也會嘗試製作自己的網站。
-                </p>
+            <p>
+                我對資訊科技與程式設計非常有興趣。
+                在課餘時間，我會利用網路上的教學資源
+                學習 HTML、CSS、JavaScript 以及 Python。
+            </p>
 
-                <p>
-                    透過實際製作專案，我學習到如何分析問題，
-                    並一步一步找出解決方法。
-                </p>
-            </div>
+            <p>
+                在製作網頁的過程中，我會自己規劃網站架構、
+                設計頁面以及處理程式問題。這讓我了解到，
+                一個完整的作品需要耐心、邏輯思考與不斷嘗試。
+            </p>
 
-        </div>
-
-
-        <!-- 運動 -->
-        <div class="activity-card">
-
-            <img src="{{ url_for('static', filename='images/basketball.jpg') }}"
-                 alt="籃球活動">
-
-            <div class="activity-content">
-                <h3>🏀 運動活動</h3>
-
-                <p>
-                    平時我喜歡參與籃球與其他運動。
-                    運動不但可以維持健康，也讓我學習到
-                    堅持與團隊合作的重要性。
-                </p>
-
-                <p>
-                    在團隊活動中，我也學習如何與不同個性
-                    的同學互相配合。
-                </p>
-            </div>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Python</span>
 
         </div>
+    </section>
 
 
-        <!-- 自主學習 -->
-        <div class="activity-card">
+    <!-- ===== 活動二：運動 ===== -->
+    <section class="activity-card">
 
-            <img src="{{ url_for('static', filename='images/study.jpg') }}"
-                 alt="自主學習">
+        <img
+            src="{{ url_for('static', filename='images/basketball.jpg') }}"
+            alt="運動活動"
+            class="activity-image"
+        >
 
-            <div class="activity-content">
-                <h3>📚 自主學習</h3>
+        <div class="activity-content">
 
-                <p>
-                    除了學校課程之外，我也會利用網路資源
-                    學習自己感興趣的內容，例如程式設計、
-                    網頁製作與資訊科技。
-                </p>
+            <h2>🏀 運動與體育活動</h2>
 
-                <p>
-                    自主學習讓我逐漸養成規劃時間與
-                    主動解決問題的習慣。
-                </p>
-            </div>
+            <p>
+                平常我喜歡參與籃球、跑步等運動。
+                運動是我在課業之外放鬆心情的重要方式，
+                也能讓我保持良好的生活習慣。
+            </p>
 
-        </div>
+            <p>
+                在團隊運動中，我學習到每個人的角色都很重要。
+                只有透過溝通與合作，才能讓團隊順利完成目標。
+                這些經驗也讓我更加重視團隊合作。
+            </p>
 
-
-        <!-- 比賽 -->
-        <div class="activity-card">
-
-            <img src="{{ url_for('static', filename='images/competition.jpg') }}"
-                 alt="比賽活動">
-
-            <div class="activity-content">
-                <h3>🏆 比賽與活動</h3>
-
-                <p>
-                    我也曾參與學校的各項活動與比賽。
-                    從準備、練習到最後完成活動，
-                    讓我學習如何設定目標並努力完成。
-                </p>
-
-                <p>
-                    這些經驗也讓我更加了解自己的優點
-                    與需要繼續進步的地方。
-                </p>
-            </div>
+            <span class="tag">籃球</span>
+            <span class="tag">團隊合作</span>
+            <span class="tag">運動</span>
 
         </div>
+    </section>
 
-    </div>
+
+    <!-- ===== 活動三：自主學習 ===== -->
+    <section class="activity-card">
+
+        <img
+            src="{{ url_for('static', filename='images/study.jpg') }}"
+            alt="自主學習活動"
+            class="activity-image"
+        >
+
+        <div class="activity-content">
+
+            <h2>📚 自主學習</h2>
+
+            <p>
+                除了學校課程之外，我也會利用課餘時間
+                學習自己感興趣的內容，例如資訊科技、
+                網頁設計以及其他實用技能。
+            </p>
+
+            <p>
+                自主學習讓我了解到，學習不一定只能依靠
+                課本或老師。只要找到適合自己的方法，
+                就可以主動探索新的知識。
+            </p>
+
+            <span class="tag">自主學習</span>
+            <span class="tag">閱讀</span>
+            <span class="tag">資訊科技</span>
+
+        </div>
+    </section>
 
 
-    <!-- 收穫 -->
-    <div class="experience">
+    <!-- ===== 活動四：比賽 ===== -->
+    <section class="activity-card">
+
+        <img
+            src="{{ url_for('static', filename='images/competition.jpg') }}"
+            alt="比賽與校園活動"
+            class="activity-image"
+        >
+
+        <div class="activity-content">
+
+            <h2>🏆 比賽與校園活動</h2>
+
+            <p>
+                高中期間，我也參與過學校舉辦的各項活動
+                與比賽。在活動準備過程中，我需要和同學
+                一起討論、分配工作並安排時間。
+            </p>
+
+            <p>
+                即使過程中遇到困難，我也學習不要輕易放棄，
+                而是和團隊一起尋找解決方法。
+                這些經驗成為高中生活中很重要的一部分。
+            </p>
+
+            <span class="tag">比賽</span>
+            <span class="tag">團隊合作</span>
+            <span class="tag">校園活動</span>
+
+        </div>
+    </section>
+
+
+    <!-- ===== 收穫 ===== -->
+    <section class="experience">
 
         <h2>🌱 課外活動帶給我的收穫</h2>
 
         <ul>
-            <li>培養團隊合作與溝通能力</li>
-            <li>學習規劃時間與完成目標</li>
-            <li>提升解決問題的能力</li>
-            <li>培養自主學習的習慣</li>
-            <li>探索自己的興趣與未來方向</li>
+            <li>學習與不同的人溝通及合作。</li>
+            <li>培養時間管理與規劃能力。</li>
+            <li>提升遇到問題時分析與解決問題的能力。</li>
+            <li>透過自主學習探索自己的興趣。</li>
+            <li>累積高中三年的生活經驗與成長。</li>
+            <li>更加了解自己未來想發展的方向。</li>
         </ul>
 
-    </div>
+    </section>
 
 
+    <!-- 回首頁 -->
     <a href="/" class="back-button">
         ← 回到首頁
     </a>
@@ -154,6 +197,8 @@
 </main>
 
 
+<!-- ===== 頁尾 ===== -->
 <footer>
-    <p>© 2026 我的個人自我介紹網站</p>
+    <p>© 2026 我的高三自我介紹網站</p>
 </footer>
+
