@@ -1,47 +1,159 @@
-<!DOCTYPE html>
-<html lang="zh-TW">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask a Question</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-        header {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            text-align: center;
-        }
-        section {
-            margin: 20px;
-        }
-        .form-box {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>課外活動</h1>
-    </header>
-    <section>
-        <div class="form-box">
-            <form action="/activities" method="post">
-                <label for="question">你的問題:</label><br>
-                <input type="text" id="question" name="question" value="{{ question }}"><br><br>
-                <label for="answer">答案:</label><br>
-                <input type="text" id="answer" name="answer" readonly value="{{ answer }}"><br><br>
-                <input type="submit" value="送出">
-                <input type="button" value="回首頁" onclick="window.location.href='/'">
-            </form>
+<!-- 導覽列 -->
+<nav>
+    <div class="logo">我的個人網站</div>
+
+    <div>
+        <a href="/">首頁</a>
+        <a href="/activities">課外活動</a>
+    </div>
+</nav>
+
+
+<!-- 頁首 -->
+<header>
+    <h1>我的課外活動</h1>
+    <p>探索興趣、累積經驗，讓高中生活更加精彩</p>
+</header>
+
+
+<!-- 內容 -->
+<main class="container">
+
+    <div class="intro">
+        <h2>課外活動與興趣</h2>
+
+        <p>
+            高中三年除了學習課業之外，我也積極參與不同的
+            課外活動。這些經驗讓我學習到團隊合作、
+            時間管理，也讓我更加了解自己的興趣。
+        </p>
+    </div>
+
+
+    <!-- 活動 -->
+    <div class="activities">
+
+        <!-- 程式設計 -->
+        <div class="activity-card">
+
+            <img src="{{ url_for('static', filename='images/coding.jpg') }}"
+                 alt="程式設計活動">
+
+            <div class="activity-content">
+                <h3>💻 程式設計</h3>
+
+                <p>
+                    我對資訊科技與程式設計很有興趣。
+                    課餘時間會學習 HTML、CSS、JavaScript
+                    與 Python，也會嘗試製作自己的網站。
+                </p>
+
+                <p>
+                    透過實際製作專案，我學習到如何分析問題，
+                    並一步一步找出解決方法。
+                </p>
+            </div>
+
         </div>
-    </section>
-</body>
-</html>
+
+
+        <!-- 運動 -->
+        <div class="activity-card">
+
+            <img src="{{ url_for('static', filename='images/basketball.jpg') }}"
+                 alt="籃球活動">
+
+            <div class="activity-content">
+                <h3>🏀 運動活動</h3>
+
+                <p>
+                    平時我喜歡參與籃球與其他運動。
+                    運動不但可以維持健康，也讓我學習到
+                    堅持與團隊合作的重要性。
+                </p>
+
+                <p>
+                    在團隊活動中，我也學習如何與不同個性
+                    的同學互相配合。
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 自主學習 -->
+        <div class="activity-card">
+
+            <img src="{{ url_for('static', filename='images/study.jpg') }}"
+                 alt="自主學習">
+
+            <div class="activity-content">
+                <h3>📚 自主學習</h3>
+
+                <p>
+                    除了學校課程之外，我也會利用網路資源
+                    學習自己感興趣的內容，例如程式設計、
+                    網頁製作與資訊科技。
+                </p>
+
+                <p>
+                    自主學習讓我逐漸養成規劃時間與
+                    主動解決問題的習慣。
+                </p>
+            </div>
+
+        </div>
+
+
+        <!-- 比賽 -->
+        <div class="activity-card">
+
+            <img src="{{ url_for('static', filename='images/competition.jpg') }}"
+                 alt="比賽活動">
+
+            <div class="activity-content">
+                <h3>🏆 比賽與活動</h3>
+
+                <p>
+                    我也曾參與學校的各項活動與比賽。
+                    從準備、練習到最後完成活動，
+                    讓我學習如何設定目標並努力完成。
+                </p>
+
+                <p>
+                    這些經驗也讓我更加了解自己的優點
+                    與需要繼續進步的地方。
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- 收穫 -->
+    <div class="experience">
+
+        <h2>🌱 課外活動帶給我的收穫</h2>
+
+        <ul>
+            <li>培養團隊合作與溝通能力</li>
+            <li>學習規劃時間與完成目標</li>
+            <li>提升解決問題的能力</li>
+            <li>培養自主學習的習慣</li>
+            <li>探索自己的興趣與未來方向</li>
+        </ul>
+
+    </div>
+
+
+    <a href="/" class="back-button">
+        ← 回到首頁
+    </a>
+
+</main>
+
+
+<footer>
+    <p>© 2026 我的個人自我介紹網站</p>
+</footer>
