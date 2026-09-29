@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>陳宥任｜學習歷程檔案</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Noto Sans TC", Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #ffffff);
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1565c0, #1976d2);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
+        header p {
+            margin-top: 12px;
+            font-size: 17px;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background-color: white;
+            padding: 28px 20px;
+            border-radius: 18px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+        }
+
+        .card a {
+            text-decoration: none;
+            color: #1565c0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .card p {
+            margin-top: 12px;
+            font-size: 14px;
+            line-height: 1.7;
+            color: #666;
+        }
+
+        /* QR Code */
+        .qrcode-section {
+            margin: 45px auto 20px;
+            background: white;
+            max-width: 360px;
+            padding: 25px;
+            border-radius: 18px;
+            text-align: center;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+        }
+
+        .qrcode-section h2 {
+            margin-top: 0;
+            color: #1565c0;
+            font-size: 20px;
+        }
+
+        .qrcode-section img {
+            width: 220px;
+            height: 220px;
+            object-fit: contain;
+            display: block;
+            margin: 15px auto;
+        }
+
+        .qrcode-section p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding: 40px 15px;
+            }
+
+            header h1 {
+                font-size: 26px;
+            }
+
+            header p {
+                font-size: 15px;
+            }
+
+            .container {
+                margin: 20px auto;
+                padding: 15px;
+            }
+
+            .qrcode-section img {
+                width: 190px;
+                height: 190px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>新北高中 陳宥任</h1>
+    <p>高中生學習歷程檔案｜讀書計畫與成長紀錄</p>
+</header>
+
+<div class="container">
+
+    <div class="card-grid">
+
+        <div class="card">
+            <a href="competition.html">🏆 競賽經驗</a>
+            <p>參與校內外競賽，培養問題解決與實作能力。</p>
+        </div>
+
+        <div class="card">
+            <a href="activities.html">🌟 課外活動</a>
+            <p>拓展視野，累積多元學習與團隊合作經驗。</p>
+        </div>
+
+        <div class="card">
+            <a href="leadership.html">👑 幹部經驗</a>
+            <p>擔任班級與校內幹部，培養領導與溝通能力。</p>
+        </div>
+
+        <div class="card">
+            <a href="club.html">🎵 社團經驗</a>
+            <p>透過社團活動探索興趣與培養責任感。</p>
+        </div>
+
+        <div class="card">
+            <a href="ask.html">📚 多元選修課程｜字典</a>
+            <p>選修跨領域課程，強化專業與探索未來方向。</p>
+        </div>
+
+        <div class="card">
+            <a href="stock.html">📈 多元選修課程｜查詢股價</a>
+            <p>輸入股票代號，例如 2330，查詢股票相關資訊。</p>
+        </div>
+
+        <div class="card">
+            <a href="ai.html">🤖 AI 應用</a>
+            <p>結合人工智慧工具，提升學習效率與創作能力。</p>
+        </div>
+
+    </div>
+
+    <!-- QR Code -->
+    <div class="qrcode-section">
+
+        <h2>📱 我的學習歷程</h2>
+
+        <img
+            src="qrcode-generator.png"
+            alt="陳宥任學習歷程 QR Code"
+        >
+
+        <p>掃描 QR Code 查看我的學習歷程網站</p>
+
+    </div>
+
+</div>
+
+<footer>
+    © 2026 陳宥任 學習歷程檔案
+</footer>
+
+</body>
+</html>
