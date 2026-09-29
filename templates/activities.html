@@ -1,204 +1,197 @@
-<!-- ===== 導覽列 ===== -->
-<nav>
-    <div class="logo">
-        我的高中生活
-    </div>
+<title>課外活動｜我的自我介紹</title>
 
-    <div class="nav-links">
-        <a href="/">首頁</a>
-        <a href="/activities">課外活動</a>
-    </div>
-</nav>
+<style>
+    * {
+        box-sizing: border-box;
+    }
 
+    body {
+        margin: 0;
+        font-family: "Noto Sans TC", Arial, sans-serif;
+        background: #f5f7fa;
+        color: #333;
+    }
 
-<!-- ===== 頁首 ===== -->
-<header>
-    <h1>課外活動</h1>
-    <p>探索興趣、累積經驗，留下高中三年的精彩回憶</p>
-</header>
+    /* 導覽列 */
+    nav {
+        background: #222;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
 
+    nav .logo {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+    }
 
-<!-- ===== 主要內容 ===== -->
-<main class="container">
+    nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 20px;
+        transition: color 0.3s;
+    }
 
-    <!-- 活動介紹 -->
-    <section class="intro">
-        <h2>我的課外生活</h2>
+    nav a:hover {
+        color: #4CAF50;
+    }
 
-        <p>
-            高中三年除了學校課業之外，我也積極參與不同的
-            課外活動。透過參加社團、運動、自主學習以及
-            各種校內活動，我累積了許多寶貴的經驗。
-        </p>
+    /* 頁首 */
+    header {
+        background: linear-gradient(135deg, #4CAF50, #2e8b57);
+        color: white;
+        text-align: center;
+        padding: 70px 20px;
+    }
 
-        <p>
-            這些活動不只讓我的高中生活更加充實，
-            也讓我學習到團隊合作、時間管理、
-            溝通能力以及面對問題時的解決能力。
-        </p>
-    </section>
+    header h1 {
+        margin: 0 0 15px;
+        font-size: 42px;
+    }
 
+    header p {
+        margin: 0;
+        font-size: 18px;
+    }
 
-    <!-- ===== 活動一：程式設計 ===== -->
-    <section class="activity-card">
+    /* 主要內容 */
+    .container {
+        max-width: 1000px;
+        margin: 50px auto;
+        padding: 0 20px;
+    }
 
-        <img
-            src="{{ url_for('static', filename='images/coding.jpg') }}"
-            alt="程式設計活動"
-            class="activity-image"
-        >
+    .intro {
+        text-align: center;
+        margin-bottom: 40px;
+    }
 
-        <div class="activity-content">
+    .intro h2 {
+        color: #2e8b57;
+        font-size: 30px;
+    }
 
-            <h2>💻 程式設計與網頁製作</h2>
+    .intro p {
+        line-height: 1.8;
+        color: #666;
+    }
 
-            <p>
-                我對資訊科技與程式設計非常有興趣。
-                在課餘時間，我會利用網路上的教學資源
-                學習 HTML、CSS、JavaScript 以及 Python。
-            </p>
+    /* 活動卡片 */
+    .activities {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
 
-            <p>
-                在製作網頁的過程中，我會自己規劃網站架構、
-                設計頁面以及處理程式問題。這讓我了解到，
-                一個完整的作品需要耐心、邏輯思考與不斷嘗試。
-            </p>
+    .activity-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
 
-            <span class="tag">HTML</span>
-            <span class="tag">CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Python</span>
+    .activity-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
 
-        </div>
-    </section>
+    .icon {
+        font-size: 45px;
+        margin-bottom: 15px;
+    }
 
+    .activity-card h3 {
+        color: #2e8b57;
+        margin-top: 0;
+        font-size: 23px;
+    }
 
-    <!-- ===== 活動二：運動 ===== -->
-    <section class="activity-card">
+    .activity-card p {
+        line-height: 1.8;
+        color: #555;
+    }
 
-        <img
-            src="{{ url_for('static', filename='images/basketball.jpg') }}"
-            alt="運動活動"
-            class="activity-image"
-        >
+    /* 學習收穫 */
+    .experience {
+        background: white;
+        margin-top: 40px;
+        padding: 35px;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    }
 
-        <div class="activity-content">
+    .experience h2 {
+        color: #2e8b57;
+        margin-top: 0;
+    }
 
-            <h2>🏀 運動與體育活動</h2>
+    .experience ul {
+        padding-left: 25px;
+    }
 
-            <p>
-                平常我喜歡參與籃球、跑步等運動。
-                運動是我在課業之外放鬆心情的重要方式，
-                也能讓我保持良好的生活習慣。
-            </p>
+    .experience li {
+        margin: 15px 0;
+        line-height: 1.7;
+    }
 
-            <p>
-                在團隊運動中，我學習到每個人的角色都很重要。
-                只有透過溝通與合作，才能讓團隊順利完成目標。
-                這些經驗也讓我更加重視團隊合作。
-            </p>
+    /* 按鈕 */
+    .back-button {
+        display: block;
+        width: fit-content;
+        margin: 40px auto 0;
+        padding: 13px 28px;
+        background: #4CAF50;
+        color: white;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s;
+    }
 
-            <span class="tag">籃球</span>
-            <span class="tag">團隊合作</span>
-            <span class="tag">運動</span>
+    .back-button:hover {
+        background: #357a38;
+    }
 
-        </div>
-    </section>
+    /* 頁尾 */
+    footer {
+        margin-top: 60px;
+        padding: 25px;
+        background: #222;
+        color: white;
+        text-align: center;
+    }
 
+    /* 手機版 */
+    @media (max-width: 700px) {
 
-    <!-- ===== 活動三：自主學習 ===== -->
-    <section class="activity-card">
+        nav {
+            flex-direction: column;
+            gap: 10px;
+        }
 
-        <img
-            src="{{ url_for('static', filename='images/study.jpg') }}"
-            alt="自主學習活動"
-            class="activity-image"
-        >
+        nav a {
+            margin-left: 10px;
+            margin-right: 10px;
+        }
 
-        <div class="activity-content">
+        header {
+            padding: 50px 20px;
+        }
 
-            <h2>📚 自主學習</h2>
+        header h1 {
+            font-size: 32px;
+        }
 
-            <p>
-                除了學校課程之外，我也會利用課餘時間
-                學習自己感興趣的內容，例如資訊科技、
-                網頁設計以及其他實用技能。
-            </p>
+        .activities {
+            grid-template-columns: 1fr;
+        }
 
-            <p>
-                自主學習讓我了解到，學習不一定只能依靠
-                課本或老師。只要找到適合自己的方法，
-                就可以主動探索新的知識。
-            </p>
+        .activity-card {
+            padding: 25px;
+        }
+    }
+</style>
 
-            <span class="tag">自主學習</span>
-            <span class="tag">閱讀</span>
-            <span class="tag">資訊科技</span>
-
-        </div>
-    </section>
-
-
-    <!-- ===== 活動四：比賽 ===== -->
-    <section class="activity-card">
-
-        <img
-            src="{{ url_for('static', filename='images/competition.jpg') }}"
-            alt="比賽與校園活動"
-            class="activity-image"
-        >
-
-        <div class="activity-content">
-
-            <h2>🏆 比賽與校園活動</h2>
-
-            <p>
-                高中期間，我也參與過學校舉辦的各項活動
-                與比賽。在活動準備過程中，我需要和同學
-                一起討論、分配工作並安排時間。
-            </p>
-
-            <p>
-                即使過程中遇到困難，我也學習不要輕易放棄，
-                而是和團隊一起尋找解決方法。
-                這些經驗成為高中生活中很重要的一部分。
-            </p>
-
-            <span class="tag">比賽</span>
-            <span class="tag">團隊合作</span>
-            <span class="tag">校園活動</span>
-
-        </div>
-    </section>
-
-
-    <!-- ===== 收穫 ===== -->
-    <section class="experience">
-
-        <h2>🌱 課外活動帶給我的收穫</h2>
-
-        <ul>
-            <li>學習與不同的人溝通及合作。</li>
-            <li>培養時間管理與規劃能力。</li>
-            <li>提升遇到問題時分析與解決問題的能力。</li>
-            <li>透過自主學習探索自己的興趣。</li>
-            <li>累積高中三年的生活經驗與成長。</li>
-            <li>更加了解自己未來想發展的方向。</li>
-        </ul>
-
-    </section>
-
-
-    <!-- 回首頁 -->
-    <a href="/" class="back-button">
-        ← 回到首頁
-    </a>
-
-</main>
-
-
-<!-- ===== 頁尾 ===== -->
-<footer>
-    <p>© 2026 我的高三自我介紹網站</p>
-</footer>
 
